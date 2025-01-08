@@ -1,0 +1,23 @@
+{
+  "merge_categories_option": true,
+  "group_small_categories": true,
+  "size_cutoff_for_other": 20,
+  "use_prespecified_config": false,
+  "performance_metric": "balanced_accuracy",
+
+  "activities_csv": "data/activities.csv",
+  "input_data_csv": "data/input-data.csv",
+  "output_file_name": "output-data_ensemble_with_fitting.csv",
+
+  "prespecified_config": {
+    "vectorizers": ["tfidf", "count", "hashing"],
+    "similarities": ["cosine", "jaccard", "levenshtein"],
+    "model_types": ["activity"],
+    "ensemble": "mean"
+  },
+
+  "vectorizer_options": ["tfidf", "count", "hashing"],
+  "similarity_options": ["cosine", "jaccard", "levenshtein"],
+  "model_type_options": ["activity", "category"],
+  "ensemble_options": ["voting", "mean"]
+}
